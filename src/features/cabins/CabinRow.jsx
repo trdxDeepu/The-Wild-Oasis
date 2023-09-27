@@ -54,6 +54,8 @@ function CabinRow({ cabin }) {
     image,
   } = cabin;
 
+  console.log(image)
+
   const queryClient = useQueryClient();
 
   const { isLoading:isDeleting, mutate } = useMutation({
