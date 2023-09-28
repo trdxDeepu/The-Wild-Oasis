@@ -83,7 +83,7 @@ function MainNav() {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/users">
+          <StyledNavLink to="/settings">
             <HiCog6Tooth />
             <span>Settings</span>
           </StyledNavLink>
