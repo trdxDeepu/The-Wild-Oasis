@@ -1,5 +1,8 @@
 import supabase, { supabaseUrl } from "./supabase";
 
+/* CRUD opreation on api to create,read,update and delete the data */
+
+/* A) This is READ data from cabins api postgree sql supabase */
 export async function getCabins() {
   const { data, error } = await supabase.from("cabins").select("*");
 
@@ -10,6 +13,9 @@ export async function getCabins() {
 
   return data;
 }
+
+/* B)  Here is the opreation for both CreateCabin and EditCabin by checking the id if id is present the cabin get EditCabin sql opreation
+but when there is no match id new Cabin must created and pass into createCabinForm */
 
 export async function createEditCabin(newCabin, id) {
   const hasImagePath = newCabin.image?.startsWith?.(supabaseUrl);
@@ -56,6 +62,8 @@ export async function createEditCabin(newCabin, id) {
 
   return data;
 }
+
+/* C) This is for Deleting the cabin by matching the id which get match and delete the cabin */
 
 export async function deleteCabin(id) {
   const { data, error } = await supabase.from("cabins").delete().eq("id", id);
