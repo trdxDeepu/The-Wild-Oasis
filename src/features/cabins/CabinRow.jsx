@@ -7,7 +7,7 @@ import { useDeleteCabin } from "./useDeleteCabin";
 import CreateCabinForm from "./CreateCabinForm";
 import {
   HiPencil,
-  HiPencilSquare,
+ 
   HiSquare2Stack,
   HiTrash,
 } from "react-icons/hi2";
